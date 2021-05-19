@@ -23,8 +23,10 @@ hist(crx$X1.25)
 crx$X. <- as.logical(as.numeric(crx$X.)-1)
 
 ####Clustering####
-# TODO: perform a clustering analysis using hierarchical and k-means clustering
-
+clust <- hclust(dist(crx))
+kclust4 <- kmeans(crx, 4)
+kclust6 <- kmeans(crx, 6)
+kclust8 <- kmeans(crx, 8)
 ####Association Rules#####
 library("arules")
 library("arulesViz")
